@@ -1,0 +1,13 @@
+csv
+numpy
+pandas
+scikit-learn
+nltk
+Sastrawi
+tensorflow
+keras-preprocessing
+google-cloud-storage
+Flask
+gunicorn
+string
+keras
