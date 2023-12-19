@@ -1,0 +1,12 @@
+# Ignore unused folder
+/unused
+
+# Ignore Docker files
+Dockerfile
+.dockerignore
+
+# Ignore model file
+model_worker.h5
+
+# Ignore credentials file
+toekangku-credentials.json
