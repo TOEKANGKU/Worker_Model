@@ -1,7 +1,7 @@
 FROM python:3-alpine
 
-RUN apt-get update -y
-RUN apt-get install -y python-pip
+RUN apk update && apk upgrade
+RUN apk add git
 
 COPY . /app
 
