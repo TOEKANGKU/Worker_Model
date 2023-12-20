@@ -1,14 +1,17 @@
-FROM python:3.8-slim
+FROM python:3-alpine
+
+RUN apt-get update -y
+RUN apt-get install -y python-pip
+
+COPY . /app
 
 WORKDIR /app
 
-COPY requirements.txt requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-RUN python -m pip install --upgrade pip==23.3.2
-RUN pip install -r requirements.txt
+RUN chmod 444 app.py
+RUN chmod 444 requirements.txt
 
-COPY . .
-EXPOSE 8080
 ENV PORT 8080
 
-CMD ["python", "main.py"]
+CMD [ "python", "app.py" ]
